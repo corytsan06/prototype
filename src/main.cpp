@@ -47,7 +47,8 @@ void loop()
   // VOLTAGE SENSOR & VOLTAGE LED
   long voltage = analogRead(VOLT_SENSOR); //def gonna have to calibrate
   Serial.print("Voltage: ");
-  Serial.print(voltage);
+  Serial.println(voltage);
+  delay(10000);
 
 }
 
