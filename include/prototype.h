@@ -1,9 +1,9 @@
 // voltage input
-#define VOLT_SENSOR 5
+#define VOLT_SENSOR 2 // 5-->2
 
 // fault inputs
 #define F1_BUTTON 34
-#define F2_BUTTON 4
+#define F2_BUTTON 35 // 4-->35
 
 // LEDS
 #define BLUE_LED 26

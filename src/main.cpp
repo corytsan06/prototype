@@ -45,10 +45,22 @@ void loop()
   }
 
   // VOLTAGE SENSOR & VOLTAGE LED
-  long voltage = analogRead(VOLT_SENSOR); //def gonna have to calibrate
+  int  volt = analogRead(VOLT_SENSOR); //def gonna have to calibrate
+  float voltage = (volt * 3.3)/4096.0;
+  float voltage_real = voltage * 5; 
   Serial.print("Voltage: ");
-  Serial.println(voltage);
-  delay(10000);
+  Serial.print(voltage_real);
+  Serial.println("V");
+  /*if (voltage > 3.3)
+  {
+    digitalWrite(VOLTAGE_LED, HIGH);
+    Serial.println("Voltage TOO HIGH!!");
+  }
+  else
+  {
+    digitalWrite(VOLTAGE_LED, LOW);
+  }*/
+  delay(1000);
 
 }
 
